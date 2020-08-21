@@ -1,0 +1,155 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+$color-header-gradient: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(19, 97, 117, 0.73));
+$color-jumbotron-background: rgba(19, 97, 117, 0.73);
+$color-header-border: rgba(173, 216, 230, 0.52);
+$color-box-shadow: rgba(0, 0, 0,.2);
+$color-menu: rgb(215, 233, 240);
+
+body {
+    background-image: url('/brown/img/background-image.png');
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 0;
+    background-color: $color-jumbotron-background;
+}
+
+header {
+    .header {
+        text-align: center;
+        align-items: center;
+        position: relative;
+        padding: 20px;
+        margin-bottom: 0px;
+        background-size: cover;
+        background-image: $color-header-gradient, url('/brown/img/header-image-min.jpg');
+        color: white;
+        min-height: 30vh;
+        background-color: white;
+        border-radius: 20px 20px 0 0;
+        box-shadow: -6px -6px 6px -6px $color-box-shadow, 6px -6px 6px -6px $color-box-shadow;   
+        .headertext {
+            position: absolute;         
+            top: 50%;              
+            left: 50%;         
+            transform: translate(-50%, -50%);
+            h1 {
+                font-family: 'Dancing Script', cursive;
+                font-size: calc(20px + 2vw);
+                text-shadow: 1px 1px 2px black; 
+            }
+            h2 {
+                font-family: 'Quicksand', sans-serif;
+                font-size: calc(12px + 1vw);
+                text-shadow: 1px 1px 1px black; 
+            }
+        }
+    }
+    .header:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 10px;
+        bottom: 0px;
+        left: 10px;
+        right: 10px;
+        bottom: 0px;
+        border-radius: 20px 20px 0 0;
+        border: 1px dashed $color-header-border;
+        border-bottom: none;
+    }
+}
+
+.content {
+    box-shadow: 6px 6px 6px -6px $color-box-shadow,-6px 6px 6px -6px $color-box-shadow;   
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    z-index: 0;   
+}
+
+.main {
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    z-index: 0;
+}
+
+.main:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 10px;
+    right: 10px;
+    bottom: 0px;
+    // border-radius: 0 0 20px 20px;
+    border: 1px dashed $color-header-border;
+    border-top: none;
+    border-bottom: none;
+    z-index: -1;
+}
+
+.navi {
+    background-color: #add8e6;
+    padding: 0px;
+    border: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+}
+
+// .navi:after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     top: 0px;
+//     bottom: 0px;
+//     left: 10px;
+//     right: 10px;
+//     border: 1px dashed white;
+//     border-top: none;
+//     border-bottom: none;
+//     z-index: -1;
+// }
+.bg-primary {
+    background-color: lightblue;
+}
+
+.dropdown-menu {
+    background-color: $color-menu;
+}
+
+footer {
+    background-color: lightblue;
+    .footer {
+        padding: 20px;
+        padding-top: 10px;
+        border-radius: 0 0 20px 20px;
+        z-index: 0;   
+        background-color: lightblue;
+    }
+    .footer:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border-radius: 0 0 20px 20px;
+        border: 1px dashed white;
+        border-top: none;
+        z-index: -1;
+    }
+}
+
+#top {
+    display: none;
+}
